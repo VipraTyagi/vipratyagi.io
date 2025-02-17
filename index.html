@@ -5,15 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vipra Tyagi - CV</title>
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 40px auto; max-width: 900px; background-color: #f8f9fa; color: #333; }
-        .container { padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h1, h2 { color: #0056b3; }
-        .contact-info { font-size: 14px; }
-        .section { margin-bottom: 20px; }
-        .bold { font-weight: bold; }
-        ul { list-style-type: none; padding: 0; }
-        ul li::before { content: '\2022'; color: #0056b3; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
-        a { color: #007bff; text-decoration: none; }
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: '\2022';
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Specific Styles */
+        .about-area {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-left {
+            text-align: center;
+        }
+
+        .about-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-right {
+            padding-left: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-right p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about-right b {
+            font-weight: bold;
+        }
+
+        /* Hover Effects */
+        .about-right p:hover {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-left, .about-right {
+                text-align: center;
+                padding: 15px;
+            }
+
+            .about-img {
+                max-width: 80%;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+        }
+
+        /* Fade-in Animation */
+        .wow.fadeIn {
+            opacity: 0;
+            animation: fadeInEffect 1s forwards;
+        }
+
+        @keyframes fadeInEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -22,11 +154,36 @@
         <p class="contact-info">Germany | <a href="mailto:vipratyagi96@gmail.com">vipratyagi96@gmail.com</a></p>
         <p class="contact-info"><a href="https://www.linkedin.com/in/vipra-tyagi" target="_blank">LinkedIn</a></p>
         
+        <!-- About Section -->
+        <div class="about-area section-gap" id="About">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 about-left">
+                    <img class="about-img" src="img/blog-img.jpg" width="400" height="350" alt="Vipra Tyagi">
+                </div>
+                <div class="col-lg-5 col-md-12 about-right">
+                    <div class="section-title">
+                        <h2>About</h2>
+                    </div>
+                    <div class="mb-50 wow fadeIn" data-wow-duration=".8s">
+                        <p>
+                            Vipra is a Master’s student in Cognitive Science at Osnabrück University, Germany, with experience in AI, automation, and research. 
+                            She has a strong background in computer vision, robotics, and software engineering.
+                        </p>
+                        <p>
+                            <b style="color:gray">SKILLS:</b> Python, C (Basics), Java (Basics), OpenCV, Open3D, ROS, Docker, AI/ML.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
         <div class="section">
             <h2>Summary</h2>
             <p>Master’s student in Cognitive Science at Osnabrück University with experience in AI, automation, and research. Strong background in computer vision, robotics, and software engineering.</p>
         </div>
-        
+
+        <!-- Experience Section -->
         <div class="section">
             <h2>Experience</h2>
             <p><span class="bold">Research Assistant, DFKI</span> – Osnabrück, Germany (Apr 2023 – Present)</p>
@@ -42,13 +199,15 @@
                 <li>Led a team of 19 engineers and contributed to AI projects like Bixby Vision.</li>
             </ul>
         </div>
-        
+
+        <!-- Education Section -->
         <div class="section">
             <h2>Education</h2>
             <p><span class="bold">MSc. in Cognitive Science</span> – Universität Osnabrück (2022 – Present)</p>
             <p><span class="bold">B.Tech in Electronics and Communication Engineering</span> – AKGEC, India (2015 – 2019)</p>
         </div>
-        
+
+        <!-- Projects Section -->
         <div class="section">
             <h2>Projects</h2>
             <p><span class="bold">Label Efficient and Adaptive Plant Images Segmentation</span> – Master’s Thesis (Ongoing)</p>
@@ -60,7 +219,8 @@
                 <li>Developed a security device to send real-time alerts.</li>
             </ul>
         </div>
-        
+
+        <!-- Skills Section -->
         <div class="section">
             <h2>Skills</h2>
             <ul>
@@ -71,7 +231,8 @@
                 <li>OS: Linux, Windows</li>
             </ul>
         </div>
-        
+
+        <!-- Languages Section -->
         <div class="section">
             <h2>Languages</h2>
             <p>English (Professional), Hindi (Native), German (A1.1)</p>
