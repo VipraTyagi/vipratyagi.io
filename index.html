@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vipra Tyagi - CV</title>
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 40px auto;
@@ -13,46 +12,28 @@
             background-color: #f8f9fa;
             color: #333;
         }
-
         .container {
             padding: 20px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h1, h2 {
             color: #0056b3;
-            font-weight: bold;
         }
-
         .contact-info {
             font-size: 14px;
-            color: #555;
         }
-
-        .contact-info a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-
         .bold {
             font-weight: bold;
         }
-
         ul {
             list-style-type: none;
             padding: 0;
         }
-
         ul li::before {
             content: '\2022';
             color: #0056b3;
@@ -61,90 +42,54 @@
             width: 1em;
             margin-left: -1em;
         }
-
         a {
             color: #007bff;
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* Work Experience Styles */
+        .work-area {
+            margin-top: 30px;
+            margin-bottom: 90px;
         }
-
-        /* Section Specific Styles */
-        .about-area {
-            padding: 60px 0;
-            background-color: #f9f9f9;
+        .work-area .section-title h2 {
+            font-size: 30px;
+            color: #0056b3;
+            margin-bottom: 30px;
         }
-
-        .about-left {
-            text-align: center;
-        }
-
-        .about-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-right {
-            padding-left: 30px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .single-job {
+            border-bottom: 1px solid #e0e0e0;
             margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .top-sec {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .top-left h4 {
+            font-size: 22px;
             color: #333;
         }
-
-        .about-right p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .top-left p {
+            font-size: 14px;
+            color: #777;
+        }
+        .top-right a {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .bottom-sec {
+            font-size: 14px;
             color: #555;
-            margin-bottom: 20px;
         }
-
-        .about-right b {
-            font-weight: bold;
-        }
-
-        /* Hover Effects */
-        .about-right p:hover {
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-left, .about-right {
-                text-align: center;
-                padding: 15px;
-            }
-
-            .about-img {
-                max-width: 80%;
-            }
-
-            .contact-info {
-                text-align: center;
-            }
-        }
-
-        /* Fade-in Animation */
-        .wow.fadeIn {
-            opacity: 0;
-            animation: fadeInEffect 1s forwards;
-        }
-
-        @keyframes fadeInEffect {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .bottom-sec b {
+            color: #0056b3;
         }
     </style>
 </head>
@@ -154,60 +99,85 @@
         <p class="contact-info">Germany | <a href="mailto:vipratyagi96@gmail.com">vipratyagi96@gmail.com</a></p>
         <p class="contact-info"><a href="https://www.linkedin.com/in/vipra-tyagi" target="_blank">LinkedIn</a></p>
         
-        <!-- About Section -->
-        <div class="about-area section-gap" id="About">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-6 about-left">
-                    <img class="about-img" src="img/blog-img.jpg" width="400" height="350" alt="Vipra Tyagi">
-                </div>
-                <div class="col-lg-5 col-md-12 about-right">
-                    <div class="section-title">
-                        <h2>About</h2>
-                    </div>
-                    <div class="mb-50 wow fadeIn" data-wow-duration=".8s">
-                        <p>
-                            Vipra is a Master’s student in Cognitive Science at Osnabrück University, Germany, with experience in AI, automation, and research. 
-                            She has a strong background in computer vision, robotics, and software engineering.
-                        </p>
-                        <p>
-                            <b style="color:gray">SKILLS:</b> Python, C (Basics), Java (Basics), OpenCV, Open3D, ROS, Docker, AI/ML.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Summary Section -->
         <div class="section">
             <h2>Summary</h2>
             <p>Master’s student in Cognitive Science at Osnabrück University with experience in AI, automation, and research. Strong background in computer vision, robotics, and software engineering.</p>
         </div>
-
-        <!-- Experience Section -->
-        <div class="section">
-            <h2>Experience</h2>
-            <p><span class="bold">Research Assistant, DFKI</span> – Osnabrück, Germany (Apr 2023 – Present)</p>
-            <ul>
-                <li>Worked with 3D sensor data, OpenCV, and Open3D for image processing.</li>
-                <li>Developed Python algorithms for 3D mesh generation and surface reconstruction.</li>
-                <li>Used Docker to manage TensorRT files and contributed to dataset labeling.</li>
-            </ul>
-            
-            <p><span class="bold">Automation Engineer, Samsung Research Institute</span> – Noida, India (Jul 2019 – Aug 2022)</p>
-            <ul>
-                <li>Automated testing tasks using STP and PyCharm.</li>
-                <li>Led a team of 19 engineers and contributed to AI projects like Bixby Vision.</li>
-            </ul>
-        </div>
-
-        <!-- Education Section -->
+        
         <div class="section">
             <h2>Education</h2>
             <p><span class="bold">MSc. in Cognitive Science</span> – Universität Osnabrück (2022 – Present)</p>
             <p><span class="bold">B.Tech in Electronics and Communication Engineering</span> – AKGEC, India (2015 – 2019)</p>
         </div>
 
-        <!-- Projects Section -->
+        <!-- Start Work Experience Section -->
+        <section class="work-area">
+            <div class="container" id="Experience">
+                <div class="row d-flex">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Work Experience</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Assistant at DFKI -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="single-job">
+                            <div class="top-sec d-flex justify-content-between">
+                                <div class="top-left">
+                                    <h4>Research Assistant, DFKI</h4>
+                                    <p>Working with 3D sensor data, OpenCV, and Open3D for image processing.</p>
+                                </div>
+                                <div class="top-right">
+                                    <a href="#" onclick="return false" class="primary-btn" data-text="Apr '23 to Present">
+                                        <span>A</span><span>p</span><span>r</span>
+                                        <span>'</span><span>2</span><span>3</span>
+                                        <span>t</span><span>o</span>
+                                        <span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bottom-sec wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                                &#8226; <b>3D Sensor Data Processing:</b> Worked on processing 3D sensor data for computer vision tasks using OpenCV and Open3D libraries.</br>
+                                &#8226; <b>Python Algorithms:</b> Developed Python algorithms for 3D mesh generation and surface reconstruction.</br>
+                                &#8226; <b>TensorRT & Docker:</b> Managed TensorRT files and utilized Docker containers for deployment and experimentation.</br>
+                                &#8226; <b>Dataset Labeling:</b> Contributed to labeling datasets for machine learning and computer vision models.</br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Automation Engineer at Samsung -->
+                    <div class="col-lg-12">
+                        <div class="single-job">
+                            <div class="top-sec d-flex justify-content-between">
+                                <div class="top-left">
+                                    <h4>Automation Engineer, Samsung Research Institute</h4>
+                                    <p>Automating tasks for testing and contributing to AI projects like Bixby Vision.</p>
+                                </div>
+                                <div class="top-right">
+                                    <a href="#" onclick="return false" class="primary-btn" data-text="Jul '19 to Aug '22">
+                                        <span>J</span><span>u</span><span>l</span>
+                                        <span>'</span><span>1</span><span>9</span>
+                                        <span>t</span><span>o</span>
+                                        <span>A</span><span>u</span><span>g</span>
+                                        <span>'</span><span>2</span><span>2</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bottom-sec wow fadeIn justify-content-center" data-wow-duration="1s" data-wow-delay="0.2s">
+                                &#8226; <b>Test Automation:</b> Automated testing tasks using STP and PyCharm, improving efficiency in the testing process.</br>
+                                &#8226; <b>AI Projects:</b> Led AI-related projects, including contributions to Samsung's Bixby Vision project.</br>
+                                &#8226; <b>Team Leadership:</b> Led a team of 19 engineers and oversaw the automation of critical tasks.</br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Work Experience Section -->
+
         <div class="section">
             <h2>Projects</h2>
             <p><span class="bold">Label Efficient and Adaptive Plant Images Segmentation</span> – Master’s Thesis (Ongoing)</p>
@@ -220,7 +190,6 @@
             </ul>
         </div>
 
-        <!-- Skills Section -->
         <div class="section">
             <h2>Skills</h2>
             <ul>
@@ -232,7 +201,6 @@
             </ul>
         </div>
 
-        <!-- Languages Section -->
         <div class="section">
             <h2>Languages</h2>
             <p>English (Professional), Hindi (Native), German (A1.1)</p>
